@@ -1,0 +1,158 @@
+1. System program problem detected:
+	sudo rm /var/crash/*
+
+2. skype install:
+	sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+	sudo apt-get update 
+	sudo apt-get install skype
+
+3. Chrome install:
+	1. Add key:
+		wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+	2. Set repository:
+		sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+	3. Install package:
+		sudo apt-get update 
+		sudo apt-get install google-chrome-stable
+
+4. How to Completely Uninstall/Remove Wine in Ubuntu 14.04
+	sudo apt-get remove wine
+	rm -rf $HOME/.wine
+	rm -f $HOME/.config/menus/applications-merged/wine*
+	rm -rf $HOME/.local/share/applications/wine
+	rm -f $HOME/.local/share/desktop-directories/wine*
+	rm -f $HOME/.local/share/icons/????_*.xpm
+
+	sudo apt-get remove –purge wine
+
+	sudo apt-get update
+	sudo apt-get autoclean
+	sudo apt-get clean
+	sudo apt-get autoremove
+
+5. Viber install:
+	wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+	sudo apt-get install gdebi
+	sudo gdebi viber.deb
+	Uninstall: sudo apt-get remove viber
+	FOR Ubuntu 15.10: http://tutorialforlinux.com/2015/10/01/how-to-install-viber-on-lubuntu-15-10-wily-64bit-linuxgnu/
+
+6. g++ install:
+	sudo apt-get update
+	sudo apt-get install g++
+
+7. internet speed install:
+	sudo add-apt-repository ppa:nilarimogard/webupd8
+	sudo apt-get update
+	sudo apt-get install indicator-netspeed
+	indicator-netspeed &
+
+8. wifi install:
+	sudo apt-get install git build-essential
+	git clone https://github.com/neurobin/MT7630E.git
+	cd MT7630E/
+	chmod +x install test uninstall
+	sudo ./install
+
+9. Bluetooth install:
+	sudo apt-get install bluez bluez-alsa bluez-audio bluez-btsco bluez-compat bluez-cups bluez-dbg bluez-gstreamer bluez-hcidump bluez-pcmcia-support bluez-tools bluez-utils python-bluez bluewho indicator-bluetooth libbluetooth-dev  libgnome-bluetooth11 libbluetooth3
+
+10. Unable to Access "Local Disk" Fix:
+	sudo ntfsfix /dev/sda7
+	note: sda7=ur local disk number
+
+11. Cleaning Up:
+	echo "Cleaning Up" &&
+	sudo apt-get -f install &&
+	sudo apt-get autoremove &&
+	sudo apt-get -y autoclean &&
+	sudo apt-get -y clean
+11.1 Cleaning up (16.04)
+	sudo apt-get autoremove
+	sudo apt-get autoclean
+
+12. launcher-position Bottom:
+	gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+13.Install Avro for Bangla (16.04)
+
+	wget "https://github.com/maateen/avro/releases/download/v2.0/avro_2.0-1_all.deb"
+	sudo dpkg -i avro_2.0-1_all.deb
+	/* jodi kono somossa hoy*/
+	sudo apt-get install -fy
+
+
+	/*now go 
+	I hope, all is well now and the installation has been finished.
+
+	2. Go to System Settings -> Language Support from Unity Launcher
+
+	3. Look at the Keyboard input method system
+
+	4. Select IBus and close the window.
+
+	5. I believe that you need to restart IBus to make everything work fine. Try the following command:
+
+	ibus restart 
+
+	6. Now go to System Settings -> Keyboard -> Text Entry
+
+	7. Search and add Avro Phonetic as input source. That's all.
+
+
+	*/
+
+
+14. Ubuntu After Install:
+	sudo add-apt-repository ppa:thefanclub/ubuntu-after-install
+	sudo apt-get update
+	sudo apt-get install ubuntu-after-install
+
+15. Code Blocks:
+	Install:
+	sudo add-apt-repository ppa:damien-moore/codeblocks-stable
+	sudo apt update
+	sudo apt install codeblockss
+	sudo apt-get install codeblocks-contrib
+	Uninstall:
+	sudo apt remove codeblocks && sudo apt autoremove
+
+16. Install JAVA:
+	sudo add-apt-repository ppa:webupd8team/java
+	sudo apt update
+	sudo apt install oracle-java8-installer
+
+17. Install Unity Tweak Tool:
+	sudo apt install unity-tweak-tool
+
+18. Install VLC:
+	sudo add-apt-repository ppa:videolan/stable-daily
+	sudo apt update
+	sudo apt install vlc
+	sudo apt install libavcodec-extra-53
+
+19. Install Archive Packages:
+	sudo apt install 7zip unrar zip unzip
+
+20. Install FTP Client:
+	sudo apt install filezilla
+
+21. Install Flash Support for Browsers:
+	sudo apt install flashplugin-installer
+
+22. Increase Sound volume in ubuntu
+	sudo apt-get install pavucontrol
+
+23. Install flash player
+	sudo apt update
+	sudo apt install adobe-flashplugin
+
+24. nothing is
+
+
+
+		
+	
+	
+
+
